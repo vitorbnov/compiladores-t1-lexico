@@ -1,0 +1,16 @@
+#define ID -1
+#define NUM_PALAVRAS 14
+#define PROGRAM 0
+#define PROCEDURE 1
+#define BEGIN2 2
+#define END 3
+#define VAR 4
+#define INTEGER 5
+#define REAL 6
+#define READ 7
+#define WRITE 8
+#define WHILE 9
+#define DO 10
+#define IF 11
+#define THEN 12
+#define ELSE 13
