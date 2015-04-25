@@ -1,0 +1,8 @@
+program lalg;
+{
+entrada
+}
+var a: integer;
+beg!n
+readd(a, @, 1);
+end.

@@ -1,0 +1,13 @@
+program nome1;
+{exemplo 1}
+var a, a1, 5b: integer;
+begin
+read(@31);
+21a.1:=1.a*2;
+while (a1>0) do
+begin
+write(113%);
+a1:=a1-1;
+end;
+if a<> b then write(a);
+end.
