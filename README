@@ -1,0 +1,18 @@
+** Analisador Léxico da LALG - Arquivo LEIA-ME **
+** Guia prático**
+
+Para compilar:
+	$ make
+
+Para executar um dos testes:
+	$ make <n>
+
+	n = número do teste [1 até 5]
+
+Para executar um arquivo específico:
+	$ make < <nome_do_arquivo>
+	
+	nome_do_arquivo = arquivo fonte lalg
+
+Para limpar diretório atual de trabalho:
+	$ make clean

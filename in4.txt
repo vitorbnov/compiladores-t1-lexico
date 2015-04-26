@@ -1,7 +1,5 @@
 program lalg;
-{
-entrada
-}
+{entrada
 var a: integer;
 beg!n
 readd(a, @, 1);

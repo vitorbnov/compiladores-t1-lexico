@@ -1,5 +1,6 @@
 program nome1;
-{exemplo 1}
+{
+exemplo 1}
 var a, a1, 5b: integer;
 begin
 read(@31);

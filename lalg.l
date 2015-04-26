@@ -15,10 +15,6 @@
 	*
 	**/
 
-
-
-
-
 %{
 	#include <stdio.h>
 	#include <stdlib.h>
@@ -26,14 +22,11 @@
 	#define HASH_MAX_INDEX 9973 
 	#define OK 1	
 
-
 	// Arquivo de saída
 	FILE *output_file;
 
-
 	// Tabela para as palavras reservadas
 	char *reserved_word_table[HASH_MAX_INDEX];
-
 
 	/** Função Hash **/
 	int h(char* strkey){
@@ -45,35 +38,25 @@
 		return value;
 	}
 
-
 %}
-
-
 
 SPACE [\ \r\t\n]
 INVALID ["'!@#$%¨&~]
 
-
-
 %%
-
-
-
+	
 	/*** COMENTÁRIOS ***/
 
 	/* Ignorar*/
-\{(.|{SPACE})*\} {
+\{(.|\n)*\} {
 	return OK; // Ignora Comentários
 }
 
 	/* Comentário não fechado */
-	/* FALTANDO!!! */
-	/*<comment><<EOF>> {
-	printf("%s - ERRO: Comentario nao fechado", yytext);
+\{[^\}]* {
+	printf("--------------------------------\n%s--------------------------------\nERRO: Comentario nao fechado\n", yytext);
 	return OK; // Ignora Comentários
-}*/
-
-
+}
 
 
 
@@ -117,16 +100,9 @@ INVALID ["'!@#$%¨&~]
 
 
 
-
-
-
 	/*** ELIMINA ESPACAMENTOS ***/
 
 {SPACE}+ return OK;
-
-
-
-
 
 
 
@@ -163,10 +139,6 @@ INVALID ["'!@#$%¨&~]
 	fprintf(output_file,"%s - ERRO: Inteiro mal-formado\n", yytext);
 	return OK;
 }
-
-
-
-
 
 
 
@@ -237,8 +209,6 @@ INVALID ["'!@#$%¨&~]
 
 
 
-
-
 	/*** ATRIBUIÇÃO ***/
 := {
 	printf("%s - simb_atribuicao\n", yytext);
@@ -287,8 +257,6 @@ INVALID ["'!@#$%¨&~]
 
 
 
-
-
 	/*** CARACTERES INVÁLIDOS ***/
 
 [[:^alnum:]] {
@@ -297,9 +265,7 @@ INVALID ["'!@#$%¨&~]
 	return OK;
 }
 
-
 %%
-
 
 // Retornar falso ao encontrar final de arquivo e termina o scan
 int yywrap(void){
