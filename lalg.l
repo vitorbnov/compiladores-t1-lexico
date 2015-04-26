@@ -4,11 +4,11 @@
 	*	UNIVERSIDADE DE SÃO PAULO
 	*	INSTITUTO DE CIÊNCIAS MATEMÁTICAS E DE COMPUTAÇÃO
 	*
-  *	ALUNOS:
+	*	ALUNOS:
 	*		José Victor Uliana Martins - 7656620
-	*		Vinicius Marchesin - XXXXXXX
+	*		Vinicius Marchesin - 8066374
 	*		Vitor Barbosa Novello -	7656425
-  *
+ 	*
 	*	PROFESSOR: Diego Raphael Amancio
 	*
 	*	SÃO CARLOS - ABRIL/2015
