@@ -2,13 +2,14 @@ CC=gcc
 FC=flex
 src_l=lalg.l
 src_c=lex.yy.c
-exe=exe
+exe=lalg-al
 par=-o
 in1=in1.txt
 in2=in2.txt
 in3=in3.txt
 in4=in4.txt
 in5=in5.txt
+out=lalg-al-out.txt
 
 all: compile_flex compile_c
 
@@ -17,6 +18,9 @@ compile_flex:
 
 compile_c: compile_flex
 	$(CC) $(src_c) $(par) $(exe)
+
+clean:
+	rm $(exe) $(src_c) $(out)
 
 1: all
 	./$(exe) < $(in1)
